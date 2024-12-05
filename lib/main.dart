@@ -11,11 +11,68 @@ class QuizApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: QuizScreen(),
+      home: HomeScreen(),
     );
   }
 }
 
+// Tela inicial
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: [
+          // Imagem de fundo
+          Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/img/fundo_app.jpg'),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          Center(
+            // Centraliza o conteúdo
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Text(
+                  'Bem-vindo ao Quiz!',
+                  style: TextStyle(
+                    fontSize: 32,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const QuizScreen(),
+                      ),
+                    );
+                  },
+                  child: const Text(
+                    'Iniciar Quiz',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// Tela do Quiz
 class QuizScreen extends StatefulWidget {
   const QuizScreen({super.key});
 
@@ -49,7 +106,7 @@ class _QuizScreenState extends State<QuizScreen> {
         "Agência Nacional para Avanços Espaciais",
         "Nova Aliança Aeronáutica e Espacial"
       ],
-      "correctAnswer": 0
+      "correctAnswer": 1
     },
     {
       "question": "O que são buracos negros?",
@@ -169,9 +226,10 @@ class _QuizScreenState extends State<QuizScreen> {
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 20),
-        ElevatedButton(
+        ElevatedButton.icon(
           onPressed: restartQuiz,
-          child: const Text('Reiniciar Quiz'),
+          icon: const Icon(Icons.restart_alt),
+          label: const Text('Reiniciar Quiz'),
         ),
       ],
     );
