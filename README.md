@@ -1,16 +1,54 @@
-# app_quiz
+# Quiz de 5 Perguntas em Flutter
 
-A new Flutter project.
+Este projeto é um **quiz interativo de 5 perguntas** desenvolvido com **Flutter**, que permite aos usuários responderem a uma série de perguntas e obterem um feedback após completá-las.
 
-## Getting Started
+## Funcionalidades
 
-This project is a starting point for a Flutter application.
+- **Tela de Perguntas**: Exibe 5 perguntas com opções de resposta.
+- **Navegação**: Permite que o usuário avance pelas perguntas uma de cada vez.
+- **Resultado**: Ao final do quiz, exibe a quantidade de respostas corretas.
 
-A few resources to get you started if this is your first Flutter project:
+## Tecnologias Utilizadas
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Flutter**: Framework para desenvolvimento de aplicativos móveis.
+- **Dart**: Linguagem de programação usada no Flutter.
+- **State Management**: Utiliza `setState` para gerenciar o estado durante o quiz.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Pré-requisitos
+
+Antes de rodar o projeto, você precisa ter os seguintes itens instalados:
+
+- [Flutter SDK](https://flutter.dev/docs/get-started/install)
+- [Dart SDK](https://dart.dev/get-dart)
+- Editor de código (recomendado: [Visual Studio Code](https://code.visualstudio.com/))
+- Emulador ou dispositivo físico Android/iOS
+
+## Como Rodar o Projeto
+
+Siga as etapas abaixo para rodar o projeto:
+
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/seu-usuario/quiz-flutter.git
+   ```
+
+2. **Entre na pasta do projeto**:
+   ```bash
+   cd quiz-flutter
+   ```
+
+3. **Instale as dependências**:
+   ```bash
+   flutter pub get
+   ```
+
+4. **Execute o aplicativo**:
+   - Conecte um dispositivo ou inicie um emulador.
+   - Execute o comando:
+   ```bash
+   flutter run
+   ```
+
+## Estrutura do Projeto
+
+- **lib/main.dart**: Tela onde as perguntas são apresentadas.
