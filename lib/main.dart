@@ -59,7 +59,7 @@ class HomeScreen extends StatelessWidget {
                     );
                   },
                   child: const Text(
-                    'Iniciar Quiz',
+                    'Iniciar',
                     style: TextStyle(fontSize: 20),
                   ),
                 ),
